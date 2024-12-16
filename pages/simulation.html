@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOS Attack Simulation - DOS Simulator</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/simulation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">DOS Simulator</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="what-is-dos.html">What is DOS?</a></li>
+            <li><a href="simulation.html" class="active">Simulation</a></li>
+            <li><a href="defense.html">Defense</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="simulation-page">
+        <section class="simulation-header">
+            <h1>DOS Attack Simulation</h1>
+            <p>Experience different types of DOS attacks in a controlled environment. Adjust parameters and observe their effects on the target server.</p>
+        </section>
+
+        <section class="simulation-container">
+            <div class="simulation-controls">
+                <div class="attack-type-selector">
+                    <h3>Select Attack Type</h3>
+                    <select id="attackType">
+                        <option value="syn-flood">SYN Flood</option>
+                        <option value="udp-flood">UDP Flood</option>
+                        <option value="http-flood">HTTP Flood</option>
+                        <option value="slowloris">Slowloris</option>
+                    </select>
+                </div>
+
+                <div class="attack-parameters">
+                    <h3>Attack Parameters</h3>
+                    <div class="parameter">
+                        <label for="requestRate">Request Rate (per second)</label>
+                        <input type="range" id="requestRate" min="1" max="1000" value="100">
+                        <span class="parameter-value">100</span>
+                    </div>
+                    <div class="parameter">
+                        <label for="numAttackers">Number of Attackers</label>
+                        <input type="range" id="numAttackers" min="1" max="100" value="10">
+                        <span class="parameter-value">10</span>
+                    </div>
+                    <div class="parameter">
+                        <label for="packetSize">Packet Size (bytes)</label>
+                        <input type="range" id="packetSize" min="64" max="1500" value="64">
+                        <span class="parameter-value">64</span>
+                    </div>
+                </div>
+
+                <div class="simulation-buttons">
+                    <button id="startAttack" class="primary-button">Start Attack</button>
+                    <button id="resetSimulation" class="secondary-button">Reset</button>
+                </div>
+            </div>
+
+            <div class="simulation-visualization">
+                <div class="network-diagram" id="networkDiagram">
+                    <!-- Network visualization will be rendered here -->
+                </div>
+                <div class="server-metrics">
+                    <div class="metric">
+                        <h4>Server Load</h4>
+                        <div class="metric-gauge" id="serverLoad">
+                            <div class="gauge-fill"></div>
+                            <span class="gauge-value">0%</span>
+                        </div>
+                    </div>
+                    <div class="metric">
+                        <h4>Response Time</h4>
+                        <div class="metric-gauge" id="responseTime">
+                            <div class="gauge-fill"></div>
+                            <span class="gauge-value">0ms</span>
+                        </div>
+                    </div>
+                    <div class="metric">
+                        <h4>Bandwidth Usage</h4>
+                        <div class="metric-gauge" id="bandwidth">
+                            <div class="gauge-fill"></div>
+                            <span class="gauge-value">0 Mbps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="simulation-logs">
+                <h3>Event Log</h3>
+                <div class="log-container" id="eventLog">
+                    <!-- Logs will be populated here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="attack-description">
+            <h2>Attack Type Details</h2>
+            <div class="attack-info" id="attackInfo">
+                <h3>SYN Flood</h3>
+                <p>A SYN flood attack exploits the TCP handshake process by sending numerous SYN packets but never completing the handshake, exhausting the server's resources.</p>
+                <div class="attack-characteristics">
+                    <div class="characteristic">
+                        <span class="label">Difficulty to Execute:</span>
+                        <span class="value">Medium</span>
+                    </div>
+                    <div class="characteristic">
+                        <span class="label">Impact Level:</span>
+                        <span class="value">High</span>
+                    </div>
+                    <div class="characteristic">
+                        <span class="label">Detection Difficulty:</span>
+                        <span class="value">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>DOS Simulator</h4>
+                <p>An educational platform for cybersecurity awareness</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="what-is-dos.html">What is DOS?</a></li>
+                    <li><a href="defense.html">Defense</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">GitHub</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DOS Simulator. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/simulation.js"></script>
+</body>
+</html>
