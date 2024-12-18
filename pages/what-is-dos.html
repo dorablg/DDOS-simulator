@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is a DoS Attack? - DOS Simulator</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">DOS Simulator</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="what-is-dos.html" class="active">What is DOS?</a></li>
+            <li><a href="simulation.html">Simulation</a></li>
+            <li><a href="defense.html">Defense</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="dos-explanation">
+        <section class="intro-section">
+            <h1>What is a DoS Attack?</h1>
+            <p class="lead">A Denial of Service (DoS) attack is a cyber attack designed to make a computer or network resource unavailable to its intended users by overwhelming it with traffic or requests.</p>
+            
+            <div class="animation-container" id="dosAnimation">
+                <!-- Animation will be added via JavaScript -->
+            </div>
+        </section>
+
+        <section class="types-section">
+            <h2>Types of DoS Attacks</h2>
+            <div class="attack-types">
+                <div class="attack-card">
+                    <h3>Volume-Based Attacks</h3>
+                    <p>Floods the network with a huge amount of traffic to overwhelm bandwidth.</p>
+                    <ul>
+                        <li>UDP floods</li>
+                        <li>ICMP floods</li>
+                        <li>Other spoofed-packet floods</li>
+                    </ul>
+                </div>
+
+                <div class="attack-card">
+                    <h3>Protocol Attacks</h3>
+                    <p>Exploits weaknesses in protocol stack layers 3 and 4.</p>
+                    <ul>
+                        <li>SYN floods</li>
+                        <li>Fragmented packet attacks</li>
+                        <li>Ping of Death</li>
+                    </ul>
+                </div>
+
+                <div class="attack-card">
+                    <h3>Application Layer Attacks</h3>
+                    <p>Targets web application packets to crash the web server.</p>
+                    <ul>
+                        <li>HTTP floods</li>
+                        <li>Slowloris</li>
+                        <li>GET/POST floods</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="impact-section">
+            <h2>Impact of DoS Attacks</h2>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <h3>Financial Loss</h3>
+                    <p>Businesses can lose revenue due to service downtime and recovery costs.</p>
+                </div>
+                <div class="impact-item">
+                    <h3>Reputation Damage</h3>
+                    <p>Customer trust may be affected by service unavailability.</p>
+                </div>
+                <div class="impact-item">
+                    <h3>Resource Drain</h3>
+                    <p>IT teams must divert resources to mitigate and prevent attacks.</p>
+                </div>
+                <div class="impact-item">
+                    <h3>Data Loss</h3>
+                    <p>Some attacks can lead to data corruption or loss.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="history-section">
+            <h2>Historical Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="date">1988</div>
+                    <div class="content">
+                        <h3>Morris Worm</h3>
+                        <p>One of the first recognized DoS attacks, caused by a program that overwhelmed early internet computers.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">2000</div>
+                    <div class="content">
+                        <h3>MafiaBoy Attacks</h3>
+                        <p>Major DDoS attacks against Amazon, CNN, eBay, and Yahoo.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">2007</div>
+                    <div class="content">
+                        <h3>Estonia Cyber Attacks</h3>
+                        <p>First known case of a coordinated cyberattack against a nation state.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">2016</div>
+                    <div class="content">
+                        <h3>Mirai Botnet</h3>
+                        <p>Massive DDoS attack using IoT devices, affecting major internet platforms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Ready to Learn More?</h2>
+            <p>Try our interactive simulation to see how different types of DoS attacks work in practice.</p>
+            <a href="simulation.html" class="cta-button">Start Simulation</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>DOS Simulator</h4>
+                <p>An educational platform for cybersecurity awareness</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="simulation.html">Simulation</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">GitHub</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DOS Simulator. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/dos-animation.js"></script>
+</body>
+</html>

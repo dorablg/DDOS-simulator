@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOS Attack Defense - DOS Simulator</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/defense.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">DOS Simulator</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="what-is-dos.html">What is DOS?</a></li>
+            <li><a href="simulation.html">Simulation</a></li>
+            <li><a href="defense.html" class="active">Defense</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="defense-page">
+        <section class="defense-header">
+            <h1>Defend Against DOS Attacks</h1>
+            <p>Learn and implement various defense strategies to protect your server from DOS attacks.</p>
+        </section>
+
+        <section class="defense-game">
+            <div class="game-container">
+                <div class="game-header">
+                    <div class="score-panel">
+                        <div class="score">Score: <span id="scoreValue">0</span></div>
+                        <div class="level">Level: <span id="levelValue">1</span></div>
+                        <div class="health">Server Health: <span id="healthValue">100%</span></div>
+                    </div>
+                    <div class="controls">
+                        <button id="startGame" class="primary-button">Start Defense</button>
+                        <button id="resetGame" class="secondary-button">Reset</button>
+                    </div>
+                </div>
+
+                <div class="game-board" id="gameBoard">
+                    <!-- Game visualization will be rendered here -->
+                </div>
+
+                <div class="defense-tools">
+                    <h3>Defense Tools</h3>
+                    <div class="tools-grid">
+                        <div class="tool-card" data-tool="firewall">
+                            <div class="tool-icon">🛡️</div>
+                            <h4>Firewall</h4>
+                            <p>Blocks suspicious IP addresses</p>
+                            <div class="tool-cost">Cost: 100</div>
+                        </div>
+                        <div class="tool-card" data-tool="loadBalancer">
+                            <div class="tool-icon">⚖️</div>
+                            <h4>Load Balancer</h4>
+                            <p>Distributes traffic across servers</p>
+                            <div class="tool-cost">Cost: 200</div>
+                        </div>
+                        <div class="tool-card" data-tool="rateLimiter">
+                            <div class="tool-icon">🚦</div>
+                            <h4>Rate Limiter</h4>
+                            <p>Limits requests per IP</p>
+                            <div class="tool-cost">Cost: 150</div>
+                        </div>
+                        <div class="tool-card" data-tool="cache">
+                            <div class="tool-icon">💾</div>
+                            <h4>Cache</h4>
+                            <p>Reduces server load</p>
+                            <div class="tool-cost">Cost: 120</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-sidebar">
+                <div class="resource-panel">
+                    <h3>Resources</h3>
+                    <div class="resource">
+                        <span class="resource-label">Credits:</span>
+                        <span id="creditsValue">500</span>
+                    </div>
+                    <div class="resource">
+                        <span class="resource-label">Defense Rating:</span>
+                        <span id="defenseRating">0%</span>
+                    </div>
+                </div>
+
+                <div class="event-log">
+                    <h3>Event Log</h3>
+                    <div id="gameLog" class="log-container">
+                        <!-- Event logs will appear here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="defense-strategies">
+            <h2>Defense Strategies Guide</h2>
+            <div class="strategies-grid">
+                <div class="strategy-card">
+                    <h3>Rate Limiting</h3>
+                    <p>Implement rate limiting to control the number of requests from each IP address:</p>
+                    <ul>
+                        <li>Set request thresholds</li>
+                        <li>Monitor traffic patterns</li>
+                        <li>Implement progressive penalties</li>
+                    </ul>
+                </div>
+
+                <div class="strategy-card">
+                    <h3>Traffic Analysis</h3>
+                    <p>Analyze incoming traffic to identify attack patterns:</p>
+                    <ul>
+                        <li>Monitor traffic volumes</li>
+                        <li>Detect anomalies</li>
+                        <li>Track source IPs</li>
+                    </ul>
+                </div>
+
+                <div class="strategy-card">
+                    <h3>Load Distribution</h3>
+                    <p>Distribute traffic across multiple servers:</p>
+                    <ul>
+                        <li>Use load balancers</li>
+                        <li>Implement CDN</li>
+                        <li>Scale resources dynamically</li>
+                    </ul>
+                </div>
+
+                <div class="strategy-card">
+                    <h3>Filtering</h3>
+                    <p>Filter malicious traffic at network edges:</p>
+                    <ul>
+                        <li>Block suspicious IPs</li>
+                        <li>Filter abnormal packets</li>
+                        <li>Use blacklists</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="defense-tips">
+            <h2>Best Practices</h2>
+            <div class="tips-container">
+                <div class="tip">
+                    <h3>Regular Monitoring</h3>
+                    <p>Set up continuous monitoring of network traffic and server resources to detect potential attacks early.</p>
+                </div>
+                <div class="tip">
+                    <h3>Incident Response Plan</h3>
+                    <p>Develop and maintain an incident response plan to quickly address DOS attacks when they occur.</p>
+                </div>
+                <div class="tip">
+                    <h3>Infrastructure Scaling</h3>
+                    <p>Design your infrastructure to scale automatically in response to increased traffic loads.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>DOS Simulator</h4>
+                <p>An educational platform for cybersecurity awareness</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="simulation.html">Simulation</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">GitHub</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DOS Simulator. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/defense.js"></script>
+</body>
+</html>

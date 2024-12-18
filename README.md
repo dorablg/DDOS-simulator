@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # DDoS Attack Simulator 🛡️
 
 An interactive web application for learning about Distributed Denial of Service (DDoS) attacks and defense mechanisms. Built with Next.js, TypeScript, and Framer Motion.
@@ -147,3 +148,6 @@ Project Link: [https://github.com/yourusername/ddos-simulator](https://github.co
 ---
 
 Made with ❤️ by Dora Bouallegue
+=======
+# DOS_website
+>>>>>>> 5f8cea9a5fdfcbddd8cac2888dd72f86508ef689
