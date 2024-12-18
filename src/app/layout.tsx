@@ -6,8 +6,13 @@ import Navbar from '@/components/Navbar'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'DoS Simulator',
-  description: 'Interactive DoS Attack and Defense Simulator Game',
+  title: 'DDoS Attack Simulator',
+  description: 'Learn about DDoS attacks and defense mechanisms through interactive simulation',
+  icons: {
+    icon: '/shield-icon.svg',
+    shortcut: '/shield-icon.svg',
+    apple: '/shield-icon.svg',
+  },
 }
 
 export default function RootLayout({
@@ -17,6 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/shield-icon.svg" />
+      </head>
       <body className={inter.className}>
         <main className="min-h-screen bg-gray-900 text-white">
           <Navbar />

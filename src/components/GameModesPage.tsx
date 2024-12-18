@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import NetworkVisualization from './NetworkVisualization'
+import Footer from './Footer'
 
 interface Level {
   name: string
@@ -187,6 +188,7 @@ const GameModesPage = () => {
           </div>
         )}
       </div>
+      <Footer />
     </div>
   )
 }

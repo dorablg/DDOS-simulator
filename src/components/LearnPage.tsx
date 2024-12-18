@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import Footer from './Footer'
+import Quiz from './Quiz'
 
 const LearnPage = () => {
   const [selectedTerm, setSelectedTerm] = useState<string | null>(null)
@@ -35,6 +37,96 @@ const LearnPage = () => {
           'To make services unavailable',
           'To gain admin access',
           'To mine cryptocurrency'
+        ],
+        correct: 1
+      },
+      {
+        question: 'What is a DDoS attack?',
+        options: [
+          'A DoS attack from multiple sources',
+          'A single computer attack',
+          'A virus infection',
+          'A phishing attempt'
+        ],
+        correct: 0
+      },
+      {
+        question: 'What is a Botnet?',
+        options: [
+          'A type of antivirus',
+          'A network monitoring tool',
+          'A network of compromised computers used for attacks',
+          'A firewall configuration'
+        ],
+        correct: 2
+      },
+      {
+        question: 'Which is a common defense against DoS attacks?',
+        options: [
+          'Rate limiting',
+          'Increasing network speed',
+          'Using wireless connections',
+          'Removing all firewalls'
+        ],
+        correct: 0
+      },
+      {
+        question: 'What is a SYN Flood attack?',
+        options: [
+          'A water-based attack',
+          'An attack exploiting TCP handshake',
+          'A power surge attack',
+          'A database overflow'
+        ],
+        correct: 1
+      },
+      {
+        question: 'What role does a Load Balancer play?',
+        options: [
+          'Distributes network traffic across servers',
+          'Increases internet speed',
+          'Blocks all incoming traffic',
+          'Encrypts data'
+        ],
+        correct: 0
+      },
+      {
+        question: 'Which layer of the OSI model do most DoS attacks target?',
+        options: [
+          'Physical Layer',
+          'Network Layer',
+          'Application Layer',
+          'Transport Layer'
+        ],
+        correct: 2
+      },
+      {
+        question: 'What is traffic analysis in cybersecurity?',
+        options: [
+          'Monitoring road traffic',
+          'Analyzing network traffic patterns',
+          'Studying user behavior',
+          'Testing network speed'
+        ],
+        correct: 1
+      },
+      {
+        question: 'What is the purpose of a firewall in DoS prevention?',
+        options: [
+          'To block suspicious traffic',
+          'To increase network speed',
+          'To store data',
+          'To compress files'
+        ],
+        correct: 0
+      },
+      {
+        question: 'Which is NOT a sign of a DoS attack?',
+        options: [
+          'Slow network performance',
+          'Increased spam emails',
+          'Unavailable services',
+          'High resource utilization'
         ],
         correct: 1
       }
@@ -109,33 +201,11 @@ const LearnPage = () => {
           </motion.div>
         </div>
 
-        {/* Interactive Quiz Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mt-12 bg-gray-800 rounded-lg p-6"
-        >
-          <h2 className="text-2xl font-bold mb-6">Test Your Knowledge</h2>
-          {educationalContent.quizzes.map((quiz, index) => (
-            <div key={index} className="space-y-4">
-              <p className="text-xl font-semibold">{quiz.question}</p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {quiz.options.map((option, optionIndex) => (
-                  <motion.button
-                    key={optionIndex}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className={`p-4 rounded-lg border border-gray-700 text-left
-                      ${optionIndex === quiz.correct ? 'hover:border-green-500' : 'hover:border-red-500'}`}
-                  >
-                    {option}
-                  </motion.button>
-                ))}
-              </div>
-            </div>
-          ))}
-        </motion.div>
+        {/* Quiz Section */}
+        <Quiz questions={educationalContent.quizzes} />
+        
       </div>
+      <Footer />
     </div>
   )
 }
